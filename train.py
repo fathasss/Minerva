@@ -68,4 +68,5 @@ hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5,
 model.save('chatbotmodel.h5',hist)
 
 print("Done")
+print("Developed by Fatih HAS")
 # %%
