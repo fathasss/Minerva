@@ -4,9 +4,12 @@
   
   Turkish AI Chatbot.
 
+Data.json: Uygulamanın kullandığı veriseti.
+
 Data.json: The application uses dataset.
 
-RUN
+ÇALIŞTIR / RUN
+
 1. train.py
 2. minerva.py 
 
