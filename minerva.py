@@ -52,7 +52,7 @@ def get_response(intents_list, intents_json):
             break
     return result
 
-print("GO! Bot is running")
+print("Minerva sizinle konusmak istiyor :)")
 
 while True:
     message = input("")
