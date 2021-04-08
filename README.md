@@ -1,1 +1,2 @@
 # Minerva
+Yapay Zekalı Chatbot.
