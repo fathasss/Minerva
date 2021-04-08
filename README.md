@@ -8,6 +8,8 @@ Data.json: Uygulamanın kullandığı veriseti.
 
 Data.json: The application uses dataset.
 
+Minerva use Tensorflow, Keras, Numpy, Random, Nltk, Json, Pickle, WordNetlLemmatizer.
+
 ÇALIŞTIR / RUN
 
 1. train.py
