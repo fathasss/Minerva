@@ -1,6 +1,8 @@
 # Minerva
 Yapay Zekalı Chatbot.
 
+Data.json: The application uses dataset.
+
 RUN
 1. train.py
 2. minerva.py 
