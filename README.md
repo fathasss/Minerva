@@ -1,8 +1,8 @@
 # Minerva
   
-  Yapay Zekalı Sohbet Botu. 
+  Türkçe Yapay Zekalı Sohbet Botu. 
   
-  AI Chatbot.
+  Turkish AI Chatbot.
 
 Data.json: The application uses dataset.
 
