@@ -1,5 +1,4 @@
 # Minerva
-  
   Türkçe Yapay Zekalı Sohbet Botu. 
   
   Turkish AI Chatbot.
