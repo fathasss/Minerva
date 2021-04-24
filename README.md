@@ -17,7 +17,7 @@ Minerva use Tensorflow, Keras, Numpy, Random, Nltk, Json, Pickle, WordNetlLemmat
 Train.py code trains the neural network.
 Minerva.py uses.
 
-# OUTPUTS
+## OUTPUTS
 
 train.py:
 ![ekran1](https://user-images.githubusercontent.com/32196738/114045835-01a1e880-9891-11eb-9147-5c88634e05b0.PNG)
