@@ -11,12 +11,12 @@ from tensorflow.keras.optimizers import SGD
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('data.json').read())
+intents = json.loads(open('data.json',encoding='utf8').read())
 
 words = []
 classes = []
 documents = []
-ignore_letters = ['?','!','.',',']
+ignore_letters = ['?','!','.',','] #Yok sayılacak.
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
@@ -35,6 +35,7 @@ classes =  sorted(set(classes))
 
 pickle.dump(words, open('words.pkl','wb'))
 pickle.dump(classes, open('classes.pkl','wb'))
+#İki nesneyi bu dosyalara yaz.
 
 training = []
 output_empty = [0]* len(classes)
@@ -44,7 +45,7 @@ for document in documents:
     word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
     for word in words:
         bag.append(1) if word in word_patterns else bag.append(0)
-
+        #listenin sonuna eleman ekleme.
     output_row = list(output_empty)
     output_row[classes.index(document[1])] = 1
     training.append([bag, output_row])
@@ -56,9 +57,9 @@ train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),),activation='relu'))
+model.add(Dense(2056, input_shape=(len(train_x[0]),), activation='relu')) #Birinci katmanın girdi bilgisi
 model.add(Dropout(0.5))
-model.add(Dense(16, activation='relu'))
+model.add(Dense(256, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]),activation='softmax'))
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
@@ -69,4 +70,5 @@ model.save('chatbotmodel.h5',hist)
 
 print("Done")
 print("Developed by Fatih HAS")
+
 # %%
