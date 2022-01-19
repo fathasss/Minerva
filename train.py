@@ -51,15 +51,15 @@ for document in documents:
     training.append([bag, output_row])
 
 random.shuffle(training)
-training = np.array(training)
+training = np.array(training,dtype=object)
 
 train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
 model = Sequential()
-model.add(Dense(2056, input_shape=(len(train_x[0]),), activation='relu')) #Birinci katmanın girdi bilgisi
+model.add(Dense(361, input_shape=(len(train_x[0]),), activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(256, activation='relu'))
+model.add(Dense(361, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]),activation='softmax'))
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)

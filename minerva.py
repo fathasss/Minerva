@@ -1,5 +1,5 @@
 # %%
-#encoding:utf-8
+#encoding:utf-8 Türkçe karakterleri kullanmak için.
 import random
 import json
 import pickle
@@ -10,7 +10,7 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('data.json').read())
+intents = json.loads(open('data.json',encoding='utf8').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
