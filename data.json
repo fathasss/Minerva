@@ -1,6 +1,19 @@
 {
         "intents": [
                 {
+                        "tag":"noname",
+                        "patterns":[
+                                "nonamee",
+                                "dontunderstand",
+                                "anlamadınmı?"
+                        ],
+                        "responces":[
+                                "Ne dediğini anlamadım.",
+                                "Üzgünüm henüz o kadar bilgili değilim :(",
+                                "Malesef anlamadım o yüzden cevap veremeyeceğim."
+                        ]
+                },
+                {
                         "tag": "greetings",
                         "patterns": [
                                 "selam",
@@ -283,16 +296,29 @@
                         ]
                 },
                 {
-                        "tag":"eat",
+                        "tag":"why",
                         "patterns":[
-                                "Ne yiyebilirim?",
-                                "Yemek yemek istiyorum ne yapmalıyım?",
-                                "Yemek önersene bana?"
+                                "Neden Tensorflow?",
+                                "Niçin Tensorflow ile geliştirildin.",
+                                "Tensorflow hakkında bilgi verebilirmisin?",
+                                "Tensorflow nedir?"
                         ],
                         "responces":[
-                                "Hamburger, pizza, makarna yiyebilirsin :) Biraz sağlıksız ama sen bilirsin.",
-                                "Tantuni, lahmacun, Karadeniz Pidesi :( Of be olsa da yesek :)",
-                                "Önermek isterdim ama benimde canım çeker ve yiyemem ki ben :("
+                                "Tensorflow açık kaynaklı bir derin öğrenme kütüphanesidir. Dokümantasyonu oldukça fazladır. İleride farklı platformlarda çalışabilmem için bir API haline getirilip mobil, web gibi diğer platformlarda da desteğimi sağlayabilir.",
+                                " Tensorflow Google tarafından geliştirildi ve 2016' da açık kaynaklı olarak diğer geliştiricilere açıldı.Google Asistana özendim desem yalan olmaz :) Google Asistan tensorflow ile geliştirilmedi ama ben şuanlık tensorflow kullanıyorum. Çünkü fırsatlar sürekli karşımıza gelmez :D",
+                                "Tensorflow bir derin öğrenme kütüphanesidir. Açık kaynaklıdır. "
+                        ]
+                },
+                {
+                        "tag":"activation",
+                        "patterns":[
+                                "Aktivasyon fonksiyonu olarak ne kullanıyorsun?",
+                                "Çalışma mantığını anlatır mısın?",
+                                "Aktivasyon fonksiyonun ile diğerleri arasında bir kıyaslama yaparmısın?"
+                        ],
+                        "responces":[
+                                "Ben çıkış katmanında softmax fonksiyonunu kullanıyorum. Softmax kullanmamın sebebi türevlenebilir ve 0,1 aralığında değerler üretir. Aynı sigmoid deki gibi sınıflayıcı olarak kullanıldığında iyi performans gösterir.Sigmoid' den en önemli farkı sigmoid fonksiyonu gibi ikiden fazla sınıflamak gereken durumlarda özellikle derin öğrenme modellerinin çıkış katmanında tercih edilmektedir.",
+                                "Softmax aktivasyon fonksiyonu ile çalışıyorum. Girdinin belirli sınıfa ait olma olasılığını 0–1 aralığında değerler üreterek belirlenmesini sağlamaktadır. Yani olasılıksal bir yorumlama gerçekleştirir."
                         ]
                 }
         ]
